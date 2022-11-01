@@ -2,12 +2,6 @@ body {
     width: 100%;
 }
 
-.news {
-    background-color: orange;
-    min-height: 60px;
-    position: block;
-}
-
 .container {
     width: 80%;
     margin: 75px auto;
@@ -38,7 +32,34 @@ body {
 
 .nav {
     min-height: 75px;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.navButton {
+    resize: none;
+    width: 150px;
+    border: 1px solid green;
+    background-color: white;
+    padding: 11px 25px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.dropDown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    margin-left: -25px;
+}
+
+.navButton:hover .dropDown {
+    display: block;
+}
+
+
 
 .banner {
     background-color: rgb(200, 255, 100);
