@@ -1,0 +1,74 @@
+body {
+    width: 100%;
+}
+
+.news {
+    background-color: orange;
+    min-height: 60px;
+    position: block;
+}
+
+.container {
+    width: 80%;
+    margin: 75px auto;
+}
+
+.header {
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header div {
+    background-color: rgb(200, 255, 100);
+}
+
+.logo1 {
+    width: 15%;
+}
+
+.logo2 {
+    width: 40%;
+}
+
+.logo3 {
+    width: 15%;
+}
+
+.nav {
+    min-height: 75px;
+}
+
+.banner {
+    background-color: rgb(200, 255, 100);
+    min-height: 250px;
+}
+
+.register {
+    min-height: 75px;
+}
+
+.flowchart {
+    background-color: rgb(200, 255, 100);
+    min-height: 200px;
+}
+
+.cardsContainer {
+    min-height: 500px;
+}
+
+.cards {
+    min-height: 600px;
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 150px 0px;
+    background-color: rgb(200, 255, 100);
+    width: 25%;
+}
