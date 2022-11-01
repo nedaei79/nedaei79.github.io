@@ -10,7 +10,6 @@ body {
 .header {
     min-height: 150px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -32,8 +31,6 @@ body {
 
 .nav {
     min-height: 75px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .navButton {
@@ -92,4 +89,9 @@ body {
     margin: 150px 0px;
     background-color: rgb(200, 255, 100);
     width: 25%;
+}
+
+.navButton a {
+    color: black;
+    text-decoration: none;
 }
