@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="load();">
     <div class="container">
         <div class="header">
             <div class="logo1"></div>
@@ -69,6 +69,73 @@
                 <div class="card3"></div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, quisquam recusandae culpa error repellat beatae vero possimus saepe officiis! Fugiat!</p>
             </div>
+        </div>
+
+        <div class="counters">
+            <div class="counter1">
+                +<span id="counter1">0</span><br>
+                دانش‌آموز
+            </div>
+            <div class="counter2">
+                +<span id="counter2">0</span><br>
+                مدرسه
+            </div>
+            <div class="counter3">
+                <span id="counter3">0</span><br>
+                سال در جهان
+            </div>
+            <div class="counter4">
+                <span id="counter4">0</span><br>
+                سال در ایران
+            </div>
+        </div>
+
+        <script>
+            function animate(obj, initVal, lastVal, duration) {
+                let startTime = null;
+
+                //get the current timestamp and assign it to the currentTime variable
+                let currentTime = Date.now();
+
+                //pass the current timestamp to the step function
+                const step = (currentTime ) => {
+                    //if the start time is null, assign the current time to startTime
+                    if (!startTime) {
+                        startTime = currentTime ;
+                    }
+
+                    //calculate the value to be used in calculating the number to be displayed
+                    const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+                    //calculate what to be displayed using the value gotten above
+                    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+                    //checking to make sure the counter does not exceed the last value (lastVal)
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        window.cancelAnimationFrame(window.requestAnimationFrame(step));
+                    }
+                };
+
+                //start animating
+                window.requestAnimationFrame(step);
+            }
+
+            let counter1 = document.getElementById('counter1');
+            let counter2 = document.getElementById('counter2');
+            let counter3 = document.getElementById('counter3');
+            let counter4 = document.getElementById('counter4');
+            const load = () => {
+                animate(counter1, 0, 3000000, 10000);
+                animate(counter2, 0, 10000, 10000);
+                animate(counter3, 0, 25, 10000);
+                animate(counter4, 0, 14, 10000);
+            }
+        </script>
+
+        <div class="footer">
+            فوتر
         </div>
     </div>
 </body>

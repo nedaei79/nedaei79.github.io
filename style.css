@@ -56,7 +56,7 @@ body {
 
 .navButton a {
     text-decoration: none;
-    color: olive;
+    color: black;
     vertical-align: middle;
     line-height: 3vw;
     font-size: .8vw;
@@ -64,7 +64,7 @@ body {
 }
 
 .navButton:hover {
-    background-color: olive;
+    background-color: black;
     transform: scale(1.1);
     transition-duration: .5s;
 }
@@ -91,7 +91,7 @@ body {
 
     .icon .navButton a {
         text-decoration: none;
-        color: olive;
+        color: black;
         vertical-align: middle;
         line-height: 3vw;
         font-size: .8vw;
@@ -127,7 +127,7 @@ body {
 
 .registerButton a {
     text-decoration: none;
-    color: orange;
+    color: black;
     vertical-align: middle;
     line-height: 10vw;
     font-size: 3vw;
@@ -135,7 +135,7 @@ body {
 }
 
 .registerButton:hover {
-    background-color: orange;
+    background-color: black;
     transform: scale(1.1);
     transition-duration: .5s;
 }
@@ -154,7 +154,7 @@ body {
 
 .catalogButton a {
     text-decoration: none;
-    color: olive;
+    color: black;
     vertical-align: middle;
     line-height: 5vw;
     font-size: 1.5vw;
@@ -162,7 +162,7 @@ body {
 }
 
 .catalogButton:hover {
-    background-color: olive;
+    background-color: black;
     transform: scale(1.1);
     transition-duration: .5s;
 }
@@ -213,7 +213,39 @@ body {
 }
 
 .cardContainer:hover {
-    background-color: olive;
+    background-color: black;
     transform: scale(1.1);
     transition-duration: .5s;
+}
+
+.cardContainer:hover p {
+    color: white;
+    transition-duration: .5s;
+}
+
+.counters {
+    min-height: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.counters div {
+    background-color: black;
+    width: 10vw;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 5vw;
+    font-weight: bold;
+    vertical-align: middle;
+    color: white
+}
+
+.footer {
+    margin-top: 11px;
+    min-height: 10vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 10vw;
+    vertical-align: middle;
 }
