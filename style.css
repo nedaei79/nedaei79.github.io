@@ -4,95 +4,114 @@ body {
 
 .container {
     width: 80%;
-    margin: 75px auto;
+    margin: 0px auto;
 }
 
 .header {
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
-    justify-content: space-between;
-}
-
-.header div {
-    background-color: rgb(200, 255, 100);
+    justify-content:space-between;
 }
 
 .logo1 {
-    width: 15%;
+    background-image: url(images/iran-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+}
+
+.headerText {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    font-size: 1vw;
+    font-weight: bold;
 }
 
 .logo2 {
-    width: 40%;
-}
-
-.logo3 {
-    width: 15%;
+    background-image: url(images/international-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
 }
 
 .nav {
+    min-height: 25px;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 
 .navButton {
-    resize: none;
-    width: 150px;
-    border: 1px solid green;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background-color: white;
-    padding: 11px 25px;
-    display: inline-block;
-    position: relative;
+    width: 100%;
+    max-width: 150px;
     text-align: center;
 }
 
-.dropDown {
+.navButton a {
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    line-height: 25px;
+    font-size: .8vw;
+}
+
+.navButton:hover {
+    background-color: olive;
+    transition-duration: .5s;
+}
+
+.navButton:hover a {
+    color: white;
+    transition-duration: .5s;
+}
+
+.icon {
     display: none;
     position: absolute;
     z-index: 1;
-    padding-top: 20px;
-    margin-left: -25px;
 }
 
-.navButton:hover .dropDown {
-    display: block;
+@media (max-width: 1024px){
+    .nav .navButton {
+        display: none;
+    }
+
+    .nav .icon {
+        display: block;
+    }
+
+    .icon .navButton a {
+        text-decoration: none;
+        color: black;
+        vertical-align: middle;
+        line-height: 25px;
+        font-size: .8vw;
+    }
+
+    .icon .navButton:hover a {
+        color: white;
+        transition-duration: .5s;
+    }
+
+    .icon:hover .navButton {
+        display: block;
+    }
 }
 
-
-
-.banner {
-    background-color: rgb(200, 255, 100);
-    min-height: 250px;
-}
-
-.register {
-    min-height: 75px;
-}
-
-.flowchart {
-    background-color: rgb(200, 255, 100);
-    min-height: 200px;
-}
-
-.cardsContainer {
-    min-height: 500px;
-}
-
-.cards {
-    min-height: 600px;
-    width: 90%;
-    margin: 0px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.card {
-    margin: 150px 0px;
-    background-color: rgb(200, 255, 100);
-    width: 25%;
-}
-
-.navButton a {
-    color: black;
-    text-decoration: none;
-}
+@media (max-width: 1024px) {
+    .navContainer.responsive {
+        position: relative;
+    }
+    .navContainer.responsive .icon {
+        position: absolute;
+    }
+    .navContainer.responsive .navButton {
+        display: block;
+    }
+  }
