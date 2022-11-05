@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+    <link rel="preconnect" href="//v1.fontapi.ir">
+    <link href="https://v1.fontapi.ir/css/Vazirmatn:400;700" rel="stylesheet">
 </head>
 <body onload="load();">
     <div class="container">
@@ -27,10 +30,10 @@
             <div class="navButton"><a href="">محتوای آموزشی و فروشگاه</a></div>
             <div class="navButton"><a href="">اخبار و فراخوان</a></div>
             <div class="navButton"><a href="">درباره ریاضیات کانگورو</a></div>
-            <div class="navButton"><a href="">خانه</a></div>
-            <div class="navButton icon">
-                <a href=""><i class="fa fa-bars"></i></a>
-                <div class="navButton"><a href="">خانه</a></div>
+            <div class="navButton"><a href="index.html">خانه</a></div>
+            <div class="icon">
+                <div class="navButton">منو</div>
+                <div class="navButton"><a href="index.html">خانه</a></div>
                 <div class="navButton"><a href="">درباره ریاضیات کانگورو</a></div>
                 <div class="navButton"><a href="">اخبار و فراخوان</a></div>
                 <div class="navButton"><a href="">محتوای آموزشی و فروشگاه</a></div>
@@ -49,7 +52,7 @@
 
         <div class="register">
             <div class="registerButton"><a href="">ثبت نام</a></div>
-            <div class="catalogButton"><a href="">مشاهده کاتالوگ</a></div>
+            <div class="catalogButton"><a href="Catalog final 1402.pdf" target="_blank">مشاهده کاتالوگ</a></div>
         </div>
 
         <div class="flowchart">
@@ -127,7 +130,7 @@
             let counter3 = document.getElementById('counter3');
             let counter4 = document.getElementById('counter4');
             const load = () => {
-                animate(counter1, 0, 3000000, 10000);
+                animate(counter1, 0, 300000, 10000);
                 animate(counter2, 0, 10000, 10000);
                 animate(counter3, 0, 25, 10000);
                 animate(counter4, 0, 14, 10000);
